@@ -787,6 +787,13 @@ class ChartingState extends MusicBeatState
 		check_eventsSec = new FlxUICheckBox(check_notesSec.x + 100, check_notesSec.y, null, null, "Events", 100);
 		check_eventsSec.checked = true;
 
+		var MusicInChartingQuant: FlxUICheckBox = new FlxUICheckBox(MusicInChartingQuant.x + 125, MusicInChartingQuant.y, null, null, "Preview",100);
+
+                
+		MusicInChartingQuant.checked = false;
+
+		add(MusicInChartingQuant);
+		
 		var swapSection:FlxButton = new FlxButton(10, check_notesSec.y + 40, "Swap section", function()
 		{
 			for (i in 0..._song.notes[curSec].sectionNotes.length)
